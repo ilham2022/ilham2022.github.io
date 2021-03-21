@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import "compass/reset";
+    @import "compass/css3";
+    @import "compass/css3/border-radius";
+    @import "compass/css3/transform";
+    body{
+        background-image: url("assets/img/bg-2.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        }
+    .modal {
+      position: absolute;
+      top:0;
+      left:0;
+      height:100%;
+      width: 100%;
+    }
+    .content {
+        background-color: white;
+        position: absolute;
+        width: 60%;
+        height: 100%;
+        z-index:100;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .modal {
+        z-index:101;
+        background-image: url("assets/img/IMG_3168.JPG");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.5s, visibility 0s 0.5s;
+        text-align: center;
+        font-size: 50px;
+    }
+    
+    .modal.active {
+          opacity: 1;
+          visibility: visible;
+          transition: opacity 0.5s;
+    }
+    
+    .center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    
+</style>
+<body>
+        
+    <!-- <audio autoplay controls>
+        <source src="assets/audio/audio.mp3">
+    </audio> -->
+    
+    <section class="content">
+        Ini isinya<br/>
+        Ini isinya<br/>
+        Ini isinya<br/>
+        Ini isinya<br/>
+        Ini isinya<br/>
+        Ini isinya<br/>
+        Ini isinya<br/>
+        Ini isinya<br/>
+        Ini isinya<br/>
+        Ini isinya<br/>
+        Ini isinya<br/>
+        Ini isinya<br/>
+        Ini isinya<br/>
+        Ini isinya<br/>
+        Ini isinya<br/>
+        Ini isinya<br/>
+        Ini isinya<br/>
+        Ini isinya<br/>
+        Ini isinya<br/>
+        Ini isinya<br/>
+        Ini isinya<br/>
+        Ini isinya<br/>
+        Ini isinya<br/>
+        Ini isinya<br/>
+    </section>
+    
+    <section class="modal active">
+        <div class="center">Ilham & Intan <br/> Wedding <br/>03.11.2018</div>
+    </section>
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script>
+        $('#modal_button').click(function(e) {
+        $('.modal').addClass('active');
+        e.preventDefault();
+        });
+        
+        $('.modal').click(function(e) {
+        $('.modal').removeClass('active');
+        e.preventDefault();
+        });
+    </script>
+</body>
+</html>
